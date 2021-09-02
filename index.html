@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charles Pine - Front End Web Designer</title>
+    <!-- My Stylesheet -->
     <link rel="stylesheet" href="css\style.css"> 
     <link rel="icon" href="favicon (1).ico?v=2" type="image/x-icon">
+    <!-- Google Font Links -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Oswald&display=swap" rel="stylesheet">
-
+    
 </head>
 
 <body>  
@@ -20,67 +22,171 @@
         <li><a href='#work'>Work</a></li>
     </ul> -->
 
-    <!-- Image of Yuna for ...? -->
-    <!-- <img id='yuna' class="cropped1" src="css\yuba.PNG" alt="black-dog-named-yuna"> -->
-
     <!-- The cover section of the main page -->
     <div class="cover">
         <section id='main_background'>
             <h1>HEY THERE! MY NAME IS <span id='full_name'>CHARLES PINE</span>.</h1>
-            <p>I'm a full-stack web developer and lover of dogs.</p>
+            <p>I'm a Full-Stack Web Developer and lover of dogs.</p>
         </section>
-        <p><span id="down_arrow">↧</span></p>
+        <a href='#about_me' id="down_arrow">↧</a>
     </div>    
 
     <!-- The cherry blossom petals for the home page -->
     <div class='red_leaf'>
-        <div><img src="css\c_blossom.png" alt=""></div>
-        <div><img src="css\c_blossom.png" alt=""></div>
-        <div><img src="css\c_blossom.png" alt=""></div>
-        <div><img src="css\c_blossom.png" alt=""></div>
-        <div><img src="css\c_blossom.png" alt=""></div>
-        <div><img src="css\c_blossom.png" alt=""></div>
-        <div><img src="css\c_blossom.png" alt=""></div>
-        <div><img src="css\c_blossom.png" alt=""></div>
-        <div><img src="css\c_blossom.png" alt=""></div>
-        <div><img src="css\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
+        <div><img src="css\img\c_blossom.png" alt=""></div>
     </div>
 
-    <div class="about_me">
+    <!-- About Myself -->
+    <div id='about_me' class="about_me">
         <h1>About Me</h1>
-        <hr>
+        <hr class="custom_hr">
+      <div class="container">
+        <div class='row'>
+        <div class="col-lg-4 col-md-12 mx-auto my-2">
 
-        <div class="card">
-            <img class="cropped1" src="css\yuba.PNG" alt="Avatar" style="width:100%">
-            <div class="container">
-              <h2 id="yuna_name">Yuna</h2> 
-              <p>This is my Black Lab/German Shepard mix Yuna(Brownie points
-                  if you know what this is from!)
-              </p> 
+          <!-- First card -->
+          <div class="card">
+              <img src="css\img\gym.jpg" alt="Avatar">
+              <div class="container">
+                <h2 id="yuna_name">Fitness</h2> 
+                <p>In my free time, I love working out, especially if theres mountains or beaches involed!
+                </p> 
+              </div>
             </div>
+          
+          <!-- Second Card -->
+          <div class="card">
+              <img src="css\img\download.png" alt="Avatar">
+              <div class="container">
+                <h2>Who Am I?</h2> 
+                <p>I am a Full-Stack Web Developer, a lover of dogs, and a die hard caffeine addict!</p>
+              </div>
           </div>
-
-        <div class="card">
-            <img class="cropped2" src="css\cj_jess.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-              <h2 id="yuna_name">Who Am I?</h2> 
-              <p>I am a Full-Stack Web developer who focuses on Design/U.I.</p>
-            </div>
+          
+          <!-- Third Card -->
+          <div class="card">
+              <img src="css\img\vg.jpg" alt="Avatar">
+              <div class="container">
+                <h2 id="video_games">Video Games</h2> 
+                <p>
+                  I enjoy playing video games! Some of my favorite series are:
+                  Zelda, Final Fantasy, and Kingdom Hearts!
+                </p> 
+              </div>
           </div>
-
-        <div class="card">
-            <img class="cropped3" src="css\vg.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-              <h2 id="yuna_name">Video Games</h2> 
-              <p>This is my Black Lab/German Shepard mix Yuna(Brownie points
-                  if you know what this is from!)
-              </p> 
-            </div>
+    
+          
           </div>
+        </div>
+      </div>
     </div>
 
-    <div class="contact_me">
-        <h1>Contact</h1>
-    </div>
+    <!-- My Projects -->
+    <h1 id='projects_heading'>My Projects</h1>
+    <hr class='custom_hr'>
+    <div class="container projects">
+      <p>A small sample of some of the projects that I have worked on. Hover over each card to learn more about them!</p>
+        <div class="row">
+          <div id='projects_container' class="col-lg-4 col-md-6 mx-auto my-2">
+
+            <!-- First Project -->
+            <div class="flip-card-container">
+              <div class="flip-card">
+                  <div class="flip-card-front">
+                    <img src="css/img/spotify.jpg" alt="spotify_logo" style="width:300px;height:400px;">
+                  </div>
+
+                  <div class="flip-card-back">
+                    <h1>Spotify Top 100</h1>
+                    <p>A small application that generates a playlist of the top 100 songs of the year the user enters.</p>
+                    <p><a href="https://github.com/CharliePine22/spotify_top_100">More Info</a></p>
+                  </div>
+                
+              </div>
+          </div>
+
+          <!-- Second Project -->
+          <div class="flip-card-container">
+            <div class="flip-card">
+                <div class="flip-card-front">
+                  <img src="css/img/apartments.jpg" alt="apartment_housing" style="width:300px;height:400px;">
+                </div>
+
+                <div class="flip-card-back">
+                  <h1>Zillow Apartment Finder</h1>
+                  <p>A small Selenium application that scrapes zillow for the top 10 apartments and puts them into a Google Forms document.</p>
+                  <p><a href="https://github.com/CharliePine22/zillow_apartment_finder">More Info</a></p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Third Project -->
+            <div class="flip-card-container">
+              <div class="flip-card">
+                  <div class="flip-card-front">
+                    <img src="css/img/spirited_away.jpg" alt="Spirited Away movie poster" style="width:300px;height:400px;">
+                  </div>
+
+                  <div class="flip-card-back">
+                    <h1>Top Movies Database</h1>
+                    <p>An application that stores and holds the users top 10 movies and automatically scrapes the web for the movie info.</p>
+                    <p><a href="https://github.com/CharliePine22/top_movies_database">More Info</a></p>
+                  </div>
+                </div>
+              </div>
+            
+            <!-- Fourth Project -->
+            <div class="flip-card-container">
+              <div class="flip-card">
+                  <div class="flip-card-front">
+                    <img src="css/img/todo.png" alt="todo list" style="width:300px;height:400px;">
+                  </div>
+
+                  <div class="flip-card-back">
+                    <h1>Todo List</h1>
+                    <p>A Todo list using HTML, CSS, Javascript and Flask as the backend project to save and retrieve todos as well as long-term goals.</p>
+                    <p><a href="https://github.com/CharliePine22/planner">More Info</a></p>
+                  </div>
+              </div>
+              </div>
+          
+          
+            <!-- Fifth Project -->
+            <div class="flip-card-container">
+              <div class="flip-card">
+                  <div class="flip-card-front">
+                    <img src="css/img/price_check.jpg" alt="apartment_housing" style="width:300px;height:400px;">
+                  </div>
+
+                  <div class="flip-card-back">
+                    <h1>Amazon Price Check</h1>
+                    <p>An application that tracks a specific item on Amazon and will send an email to the user when the price drops by the user's specific percentage.</p>
+                    <p><a href="https://github.com/CharliePine22/amazon_price_checker">More Info</a></p>
+                  </div>
+              </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="contact container">
+          <h1>Contact Me</h1>
+          <!-- <hr class='custom_hr'>  -->
+          <p>Let's get in touch!</p>
+          <form>
+          </form>
+        </div>
 </body>
 </html>
