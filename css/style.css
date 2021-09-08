@@ -7,6 +7,13 @@ body {
     font-family: 'Cardo', serif;
 }
 
+footer .container {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    font-size: .85rem;
+}
+
 html {
     scroll-behavior: smooth;
   }
@@ -51,6 +58,30 @@ section p {
     font-size: 35px;
 }
 
+div.elem-group {
+    margin: 40px 0;
+  }
+  
+label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 4px;
+    font-size: 1.25em;
+  }
+  
+input, select, textarea {
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-family: 'Cardo', serif;
+    width: 500px;
+    padding: 8px;
+  }
+  
+textarea {
+    height: 150px;
+  }
 
 /************************************* CLASSES ******************************************/
 
@@ -59,11 +90,11 @@ section p {
     color: #D2042D;
     width: 100%;
     position: relative;
-    display: block;
+    display:block;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     padding-top:40px;
-    margin-bottom: 10rem;
+    /* margin-bottom: 10rem; */
 }
 
 
@@ -116,9 +147,18 @@ section p {
     font-size: 30px;
 }
 
+.cards {
+    display: flex;
+    justify-content: space-between
+}
+
 /* Styling for cards showcasing work */
 .card {
-    display:inline-block;
+    display:flex;
+    flex-flow: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     margin-left: 50px;
     margin-right: 50px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -145,8 +185,11 @@ section p {
 
 .contact {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
+    margin-bottom: 70px;
 }
 
 .contact h1 {
@@ -157,13 +200,16 @@ section p {
     text-transform: uppercase;
 }
 
-.projects {
-    text-align: center;
+.contact p {
+    font-size: 2rem;
 }
 
-.projects p {
-    font-size: 1.75rem;
-    margin-bottom: 75px;
+.copyright {
+    opacity: 0.75;
+}
+
+.elem-group {
+    text-align: left;
 }
 
 
@@ -224,6 +270,15 @@ section p {
     color:white;
 }
 
+.projects {
+    text-align: center;
+}
+
+.projects p {
+    font-size: 1.75rem;
+    margin-bottom: 75px;
+}
+
 /* Styling for cherry blossoms themselves */
 .red_leaf {
     position:absolute;
@@ -272,8 +327,7 @@ section p {
     background-color: #303030; 
     padding-top: 25px;
     padding-bottom: 25px;
-    height: 200px;
-    /* border-radius: 200px 0px 100px 50px;  Will work with this later */
+    height: 230px;
 }
 
 #projects_heading {
@@ -290,26 +344,27 @@ section p {
 #projects_container {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-content: center;
     flex-wrap: wrap;
     margin-bottom: 50px;
 }
 
-/* Contains style code for yuna bear*/
-#yuna {
-    position: absolute;
-    left: 25px;
-    top: 25px;
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
-}   
-
-#yuna_name {
-    font-family: 'Oswald', sans-serif;
-    font-size: 30px;
-}
+  
+#submit {
+    height: 50px;
+    background: #D2042D;
+    color: white;
+    border: 2px solid #D2042D;
+    font-size: 1.25em;
+    font-family: 'Aleo';
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #submit:hover {
+    border: 2px solid white;
+  }
 
             /************************ ANIMATIONS ************************/
 
@@ -401,20 +456,84 @@ section p {
     100% {opacity:1;}
   }
 
-@media (max-width: 800px) {
+/************************ MEDIA QUERIES ************************/
+@media (min-width: 0px) and (max-width: 325px) {
+    #main_background p {
+        position: relative;
+        top: 70px;
+    }
+
+    #down_arrow {
+        position: relative;
+        top: 225px;
+    }
+}
+
+
+/* Query for large mobile devices */
+@media (min-width: 425px) {
+
+    #main_background h1 {
+        position: relative;
+    }
+
+    #main_background p {
+        position: relative;
+        bottom: 10px;
+    }
+
+    #down_arrow {
+        position: relative;
+        top: 100px;
+    }
+  }
+
+/* Fixing awkward break point */
+@media (max-width: 750px) {
+    #main_background {
+        height: 280px;
+    }
+
     #projects_container {
       flex-direction: column;
       align-items: space-between;
       justify-content: space-between;
     }
 
-    .flip-card {
-        margin-bottom: 30px;
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flip-card-container {
+        margin-bottom: 25px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 5% 2%;
     }
   }
 
-/* @media (max-width: 1200px) {
-    #projects_container {
-      flex-direction: column;
+/* For screens that are larger than a tablet (Laptops and Desktops) */
+@media (min-width: 1024px) {
+      .card {
+          width: 25%;
+          margin: 5% 2%;
+      }
+
+      .flip-card-container {
+          margin-bottom: 30px;
+      }
+  }
+
+/* For the large big daddy screens */
+@media (min-width: 2000px) {
+    h1 {
+        font-size: 3.5rem;
     }
-  } */
+
+    #main_background {
+        height: 250px;
+    }
+}
