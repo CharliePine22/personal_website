@@ -3,8 +3,8 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Charles Pine - Front End Web Designer</title>
     <!-- My Stylesheet -->
     <link rel="stylesheet" href="css\style.css"> 
@@ -12,7 +12,8 @@
     <!-- Google Font Links -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Oswald&display=swap" rel="stylesheet">
-    
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/1e35e93db4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>  
@@ -23,7 +24,7 @@
     </ul> -->
 
     <!-- The cover section of the main page -->
-    <div class="cover">
+    <div class="container-fluid cover">
         <section id='main_background'>
             <h1>HEY THERE! MY NAME IS <span id='full_name'>CHARLES PINE</span>.</h1>
             <p>I'm a Full-Stack Web Developer and lover of dogs.</p>
@@ -49,9 +50,9 @@
     <div id='about_me' class="about_me">
         <h1>About Me</h1>
         <hr class="custom_hr">
-      <div class="container">
+        <div class="container">
         <div class='row'>
-        <div class="col-lg-4 col-md-12 mx-auto my-2">
+        <div class="cards col-lg-4 col-md-12 mx-auto my-2">
 
           <!-- First card -->
           <div class="card">
@@ -90,7 +91,7 @@
       </div>
     </div>
 
-    <!-- My Projects -->
+              <!-------- PROJECTS CONTAINER -------->
     <h1 id='projects_heading'>My Projects</h1>
     <hr class='custom_hr'>
     <div class="container projects">
@@ -180,13 +181,72 @@
           </div>
         </div>
 
-
+                    <!------- CONTACT FORM -------->
         <div class="contact container">
-          <h1>Contact Me</h1>
-          <!-- <hr class='custom_hr'>  -->
-          <p>Let's get in touch!</p>
-          <form>
+          <h1>Have Any Questions?</h1>
+          <hr class='custom_hr'> 
+
+          <form action="contact.php" method="post">
+            <div class="elem-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+            </div>
+            <div class="elem-group">
+              <label for="email">Your E-mail</label>
+              <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+            </div>
+            <div class="elem-group">
+              <label for="message">Write your message</label>
+              <textarea id="message" name="visitor_message" placeholder="Feel free just to say Hi!" required></textarea>
+            </div>
+            <button id='submit' type="submit">Send Message</button>
           </form>
         </div>
+
+                    <!-------- FOOTER ------->
+        <footer>
+          <div class="container">
+                <ul>
+                  <!-- Linkedin Button -->
+                  <li>
+                    <a href="https://www.linkedin.com/in/charlespine">
+                      <span class="fa-stack fa-xs">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fab fa-linkedin-in fa-sm fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <!-- Instagram Button -->
+                  <li>
+                    <a href="https://www.instagram.com/Mintyphreshh">
+                      <span class="fa-stack fa-xs">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-sm fa-stack-1x fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                  <!-- Github Button -->
+                  <li>
+                    <a href="https://github.com/CharliePine22">
+                      <span class="fa-stack fa-xs">
+                      <i class="fa fa-circle-thin fa-stack-2x"></i>
+                      <i class="fab fa-github fa-stack-1x fa-sm fa-inverse"></i>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Charlie Pine 1994</p>
+          </div>
+        </footer>
+
+  <!-- Redirects user back to the top of the page upon refresh -->
+  <script type="text/javascript"> 
+    window.onload = function() {
+        window.setTimeout(
+            function() { window.scrollTo(0,0); },
+            10
+        );
+    };
+  </script>
 </body>
 </html>
