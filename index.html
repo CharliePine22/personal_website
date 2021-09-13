@@ -18,10 +18,11 @@
 
 <body>  
     <!-- Navbar -->
-    <!-- <ul>
-        <li><a href=".about_me">About</a></li>
-        <li><a href='#work'>Work</a></li>
-    </ul> -->
+    <ul class='nav'>
+      <li><a class='nav_item' href='#contact'>Contact</a></li>
+      <li><a class='nav_item' href='#projects_heading'>Projects</a></li>
+      <li><a class='nav_item' href="#about_me">About</a></li>
+    </ul>
 
     <!-- The cover section of the main page -->
     <div class="container-fluid cover">
@@ -94,7 +95,7 @@
               <!-------- PROJECTS CONTAINER -------->
     <h1 id='projects_heading'>My Projects</h1>
     <hr class='custom_hr'>
-    <div class="container projects">
+    <div id='projects' class="container projects">
       <p>A small sample of some of the projects that I have worked on. Hover over each card to learn more about them!</p>
         <div class="row">
           <div id='projects_container' class="col-lg-4 col-md-6 mx-auto my-2">
@@ -182,24 +183,25 @@
         </div>
 
                     <!------- CONTACT FORM -------->
-        <div class="contact container">
+        <div id='contact' class="contact container">
           <h1>Have Any Questions?</h1>
           <hr class='custom_hr'> 
 
-          <form action="contact.php" method="post">
+          <form method="post" action="contact.php">
             <div class="elem-group">
               <label for="name">Your Name</label>
-              <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+              <input type="text" id="name" name="name" placeholder="Bruce Wayne" pattern=[A-Z\sa-z]{3,20} required>
             </div>
             <div class="elem-group">
               <label for="email">Your E-mail</label>
-              <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+              <input type="email" id="email" name="email" placeholder="nicetry@batcave.com" required>
             </div>
             <div class="elem-group">
               <label for="message">Write your message</label>
-              <textarea id="message" name="visitor_message" placeholder="Feel free just to say Hi!" required></textarea>
+              <textarea id="message" name="message" placeholder="I really like your car" required></textarea>
             </div>
-            <button id='submit' type="submit">Send Message</button>
+            <button id='submit' name='submit' value='submit' type="submit">Send Message</button>
+            <input type="hidden" name="body" />
           </form>
         </div>
 
@@ -247,6 +249,7 @@
             10
         );
     };
+
   </script>
 </body>
 </html>

@@ -47,7 +47,7 @@ li a {
     text-decoration: none;
 }
 
-/* What happens when i hover over each navbar element */
+/* Footer hovering effect */
 li a:hover {
       color:#D2042D;
       cursor:pointer;
@@ -94,7 +94,6 @@ textarea {
     text-align: center;
     padding-bottom: 50px;
     padding-top:40px;
-    /* margin-bottom: 10rem; */
 }
 
 
@@ -130,6 +129,13 @@ textarea {
     -moz-transform:scale(1); /* Firefox */
     -webkit-transform:scale(1.05); /* Safari and Chrome */
     -o-transform:scale(1); /* Opera */
+}
+
+.about_me .container {
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: space-evenly;
 }
 
 /* Styling for main cover page */
@@ -190,6 +196,10 @@ textarea {
     text-align: center;
     align-items: center;
     margin-bottom: 70px;
+}
+
+.contact hr {
+    margin-bottom: -25px;
 }
 
 .contact h1 {
@@ -270,8 +280,20 @@ textarea {
     color:white;
 }
 
+.nav_item {
+    font-size: 1.25rem;
+    opacity: 50%;
+    transition: 0.3s;
+}
+
+.nav_item:hover {
+    opacity: 100%;
+    color:white;
+}
+
 .projects {
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .projects p {
