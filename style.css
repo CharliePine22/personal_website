@@ -29,10 +29,14 @@ footer .container {
 
 footer ul {
     list-style:none;
+    padding-left: 0px;
 }
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
   }
 
 /* Giving the main cover title the font */
@@ -518,9 +522,6 @@ textarea {
 
 /* Query for large mobile devices */
 @media (max-width: 425px) {
-    form {
-        width: 200px;
-    }
     #main_background h1 {
         position: relative;
     }
@@ -534,7 +535,6 @@ textarea {
         display:flex;
         flex-direction: column;
         justify-content: flex-end;
-        display:none;
     }
 
     #down_arrow {
@@ -549,6 +549,7 @@ textarea {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 }
 
