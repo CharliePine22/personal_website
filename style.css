@@ -5,6 +5,7 @@ body {
     background-color:	#181818; /* To match the cloud image to appear seemless */
     color: white;
     font-family: 'Cardo', serif;
+    margin: 0px; /* To offput padding so nav could have full width */
 }
 
 form {
@@ -297,11 +298,17 @@ textarea {
 /* Navbar style */
 .nav {
     list-style-type: none;
+    transition: background-color 200ms linear;
+    height:50px;
     margin: 0;
     padding: 0;
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
+    position:fixed;
+    z-index: 100;
+    width:100%;
+    top:0;
   }
 
 .nav-container {
@@ -508,14 +515,22 @@ textarea {
 
 /************************ MEDIA QUERIES ************************/
 @media (min-width: 0px) and (max-width: 385px) {
+    #main_background {
+        height: 180px !important;
+    }
+
+
     #main_background p {
         position: relative;
-        top: 70px;
+        bottom: 25px;
     }
 
     #down_arrow {
-        position: relative;
-        top: 225px;
+        display: none;
+    }
+
+    .cover {
+        top:50px;
     }
 }
 
@@ -532,9 +547,12 @@ textarea {
     }
 
     .nav {
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        display:block;
+        overflow:visible;
+    }
+
+    .nav_item {
+        font-size:1rem;
     }
 
     #down_arrow {
@@ -546,7 +564,7 @@ textarea {
 @media (max-width: 500px) {
     footer ul {
         display:flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
         text-align: center;

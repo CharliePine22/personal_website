@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Oswald&display=swap" rel="stylesheet">
     <!-- Font Awesome Link -->
     <script src="https://kit.fontawesome.com/1e35e93db4.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>  
@@ -229,7 +230,7 @@
                         <i class="fab fa-instagram fa-sm fa-stack-1x fa-inverse"></i>
                       </span>
                     </a>
-                  </li>
+                  </li> 
                   <!-- Github Button -->
                   <li>
                     <a href="https://github.com/CharliePine22">
@@ -253,6 +254,16 @@
         );
     };
 
+    window.onscroll = function() {
+      let navbar = document.getElementsByClassName('nav')[0]
+      let top =	 window.pageYOffset || document.documentElement.scrollTop;
+      if (top > 100) {
+        navbar.style.background = "#181818";
+      } else {
+        navbar.style.background = "none";
+      }
+      };
+    
   </script>
 </body>
 </html>
