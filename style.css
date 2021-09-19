@@ -551,12 +551,21 @@ textarea {
         align-items: center;
         text-align: center;
     }
+
+    label {
+        text-align: center;
+    }
+
+    input, select, textarea {
+        width: 300px;
+    }
 }
 
 /* Fixing awkward break point */
 @media (max-width: 750px) {
     #main_background {
         height: 280px;
+        padding-top: 0;
     }
 
     #projects_container {
