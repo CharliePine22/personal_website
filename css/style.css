@@ -5,25 +5,39 @@ body {
     background-color:	#181818; /* To match the cloud image to appear seemless */
     color: white;
     font-family: 'Cardo', serif;
+    margin: 0px; /* To offput padding so nav could have full width */
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
 }
 
 footer .container {
+    position:relative;
     display:flex;
     flex-direction: column;
     align-items:center;
+    justify-content: center;
     font-size: .85rem;
+    width: auto;
+}
+
+footer ul {
+    list-style:none;
+    padding-left: 0px;
 }
 
 html {
     scroll-behavior: smooth;
-  }
-
-/* Navbar style */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
   }
 
 /* Giving the main cover title the font */
@@ -196,6 +210,7 @@ textarea {
     text-align: center;
     align-items: center;
     margin-bottom: 70px;
+    width: auto;
 }
 
 .contact hr {
@@ -278,6 +293,26 @@ textarea {
 
 .flip-card-back a:visited {
     color:white;
+}
+
+/* Navbar style */
+.nav {
+    list-style-type: none;
+    transition: background-color 200ms linear;
+    height:50px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    position:fixed;
+    z-index: 100;
+    width:100%;
+    top:0;
+  }
+
+.nav-container {
+    height:50px;
 }
 
 .nav_item {
@@ -479,22 +514,29 @@ textarea {
   }
 
 /************************ MEDIA QUERIES ************************/
-@media (min-width: 0px) and (max-width: 325px) {
+@media (min-width: 0px) and (max-width: 385px) {
+    #main_background {
+        height: 180px !important;
+    }
+
+
     #main_background p {
         position: relative;
-        top: 70px;
+        bottom: 25px;
     }
 
     #down_arrow {
-        position: relative;
-        top: 225px;
+        display: none;
+    }
+
+    .cover {
+        top:50px;
     }
 }
 
 
 /* Query for large mobile devices */
-@media (min-width: 425px) {
-
+@media (max-width: 425px) {
     #main_background h1 {
         position: relative;
     }
@@ -504,22 +546,55 @@ textarea {
         bottom: 10px;
     }
 
+    .nav {
+        display:block;
+        overflow:visible;
+    }
+
+    .nav_item {
+        font-size:1rem;
+    }
+
     #down_arrow {
         position: relative;
         top: 100px;
     }
   }
 
+@media (max-width: 500px) {
+    footer ul {
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    label {
+        text-align: center;
+    }
+
+    input, select, textarea {
+        width: 300px;
+    }
+}
+
 /* Fixing awkward break point */
 @media (max-width: 750px) {
     #main_background {
         height: 280px;
+        padding-top: 0;
     }
 
     #projects_container {
       flex-direction: column;
       align-items: space-between;
       justify-content: space-between;
+    }
+
+    .card {
+        width:100%;
+        margin: 25px 0;
     }
 
     .cards {
@@ -529,11 +604,6 @@ textarea {
 
     .flip-card-container {
         margin-bottom: 25px;
-    }
-
-    .card {
-        width: 100%;
-        margin: 5% 2%;
     }
   }
 
