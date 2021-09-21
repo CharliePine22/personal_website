@@ -54,7 +54,7 @@ li {
 
 /* Positioning the anchored elements */
 li a {
-    display: block;
+    display: flex;
     color: white;
     text-align: center;
     padding: 14px 46px;
@@ -96,6 +96,11 @@ input, select, textarea {
 textarea {
     height: 150px;
   }
+
+ul li {
+    margin:0;
+    padding:0;
+}
 
 /************************************* CLASSES ******************************************/
 
@@ -300,19 +305,22 @@ textarea {
     list-style-type: none;
     transition: background-color 200ms linear;
     height:50px;
+    width:100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     position:fixed;
     z-index: 100;
-    width:100%;
     top:0;
   }
 
 .nav-container {
     height:50px;
+    width:100%;
 }
 
 .nav_item {
@@ -514,15 +522,14 @@ textarea {
   }
 
 /************************ MEDIA QUERIES ************************/
-@media (min-width: 0px) and (max-width: 385px) {
+@media (max-width: 375px) {
     #main_background {
-        height: 180px !important;
+        height: 110px !important;
     }
-
 
     #main_background p {
         position: relative;
-        bottom: 25px;
+        top: 30px;
     }
 
     #down_arrow {
@@ -531,6 +538,15 @@ textarea {
 
     .cover {
         top:50px;
+        height:600px;
+    }
+
+    .nav-item {
+        font-size: 100px;
+    }
+    
+    li a {
+        padding: 14px 23px;
     }
 }
 
@@ -546,13 +562,8 @@ textarea {
         bottom: 10px;
     }
 
-    .nav {
-        display:block;
-        overflow:visible;
-    }
-
     .nav_item {
-        font-size:1rem;
+        font-size:1.15rem;
     }
 
     #down_arrow {
@@ -600,6 +611,7 @@ textarea {
     .cards {
         display: flex;
         flex-direction: column;
+        margin: 0 20px;
     }
 
     .flip-card-container {
